@@ -19,7 +19,7 @@ module Api
                 @brand = Brand.new(brand_params)
 
                 if @brand.save
-                    render json: @brand, status: :created, location: @brand
+                    render json: @brand, status: :created, location: api_v1_brand_url(@brand)
                 else
                     render json: @brand.errors, status: :unprocessable_content
                 end
@@ -40,15 +40,15 @@ module Api
             end
 
             private
-            # Use callbacks to share common setup or constraints between actions.
-            def set_brand
-                @brand = Brand.find(params.expect(:id))
-            end
+                # Use callbacks to share common setup or constraints between actions.
+                def set_brand
+                    @brand = Brand.find(params.expect(:id))
+                end
 
-            # Only allow a list of trusted parameters through.
-            def brand_params
-                params.expect(brand: [ :name, :country ])
-            end
+                # Only allow a list of trusted parameters through.
+                def brand_params
+                    params.expect(brand: [ :name ])
+                end
         end
   end
 end

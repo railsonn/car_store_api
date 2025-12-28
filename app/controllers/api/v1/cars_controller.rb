@@ -19,7 +19,7 @@ module Api
                 @car = Car.new(car_params)
 
                 if @car.save
-                render json: @car, status: :created, location: @car
+                render json: @car, status: :created, location: api_v1_car_url(@car)
                 else
                 render json: @car.errors, status: :unprocessable_content
                 end
@@ -42,12 +42,12 @@ module Api
             private
                 # Use callbacks to share common setup or constraints between actions.
                 def set_car
-                @car = Car.find(params.expect(:id))
+                    @car = Car.find(params.expect(:id))
                 end
 
                 # Only allow a list of trusted parameters through.
                 def car_params
-                params.expect(car: [ :model, :price, :color ])
+                    params.expect(car: [ :model, :price, :color, :brand_attributes => [ :name ] ])
                 end
         end
     end
