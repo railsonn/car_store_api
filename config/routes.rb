@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get "auth/login"
+  post '/login', to: 'auth#login'
   namespace :api do
     namespace :v1 do
       resources :brands, only: [:index, :create, :show, :update, :destroy]
