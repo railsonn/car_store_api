@@ -7,7 +7,7 @@ class AuthController < ApplicationController
       status: :unprocessable_entity
     else
       token = encode_token({ user_id: @user.id })
-      render json: { id: @user.id, email: @user.email, token: token }, 
+      render json: { id: @user.id, email: @user.email, token: token },
       token: token,
       status: :ok 
     end

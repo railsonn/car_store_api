@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  post 'users/create', to: 'user#create'
   get "auth/login"
   post '/login', to: 'auth#login'
   namespace :api do

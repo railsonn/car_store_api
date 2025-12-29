@@ -6,8 +6,7 @@ module Api
       # GET /cars
       def index
         @cars = Car.all
-
-        render json: @cars
+        render json: @cars, token: token
       end
 
       # GET /cars/1
