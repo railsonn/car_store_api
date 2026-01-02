@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  # Esta em ordem a forma como o usuario ira interagir com a api, desde a criacao do usuario, login e depois acesso aos recursos
+
   post 'users/create', to: 'user#create'
   get "auth/login"
   post '/login', to: 'auth#login'
@@ -8,6 +10,9 @@ Rails.application.routes.draw do
       resources :cars, only: [:index, :show, :create, :update, :destroy]
     end
   end
+
+
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

@@ -1,5 +1,5 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :id, :username, :token 
+  attributes :id, :token 
 
   def token 
     @intance_options[:token]

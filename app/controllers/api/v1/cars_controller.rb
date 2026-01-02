@@ -17,7 +17,7 @@ module Api
 
             # POST /cars
             def create
-                @car = Car.new(car_params)
+                @car = @current_user.cars.build(car_params)
 
                 if @car.save
                 render json: @car, status: :created, location: api_v1_car_url(@car)
