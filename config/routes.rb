@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
-<<<<<<< HEAD
-  get "home/index"
-  devise_for :users
-=======
->>>>>>> parent of 18a082d (instalation devise)
+
   # Esta em ordem a forma como o usuario ira interagir com a api, desde a criacao do usuario, login e depois acesso aos recursos
   post 'users/create', to: 'user#create' # rota para criar usuario
   post '/login', to: 'auth#login' # rota para fazer login e obter token

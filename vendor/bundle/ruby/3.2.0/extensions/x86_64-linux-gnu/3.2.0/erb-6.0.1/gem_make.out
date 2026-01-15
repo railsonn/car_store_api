@@ -1,0 +1,19 @@
+current directory: /home/railson/project/ruby/projetos_pessoais/lojista/vendor/bundle/ruby/3.2.0/gems/erb-6.0.1/ext/erb/escape
+/usr/bin/ruby3.2 -I/usr/lib/ruby/vendor_ruby extconf.rb
+checking for rb_ext_ractor_safe() in ruby.h... yes
+creating Makefile
+
+current directory: /home/railson/project/ruby/projetos_pessoais/lojista/vendor/bundle/ruby/3.2.0/gems/erb-6.0.1/ext/erb/escape
+make DESTDIR\= sitearchdir\=./.gem.20260115-40784-euv8xg sitelibdir\=./.gem.20260115-40784-euv8xg clean
+
+current directory: /home/railson/project/ruby/projetos_pessoais/lojista/vendor/bundle/ruby/3.2.0/gems/erb-6.0.1/ext/erb/escape
+make DESTDIR\= sitearchdir\=./.gem.20260115-40784-euv8xg sitelibdir\=./.gem.20260115-40784-euv8xg
+compiling escape.c
+linking shared-object erb/escape.so
+
+current directory: /home/railson/project/ruby/projetos_pessoais/lojista/vendor/bundle/ruby/3.2.0/gems/erb-6.0.1/ext/erb/escape
+make DESTDIR\= sitearchdir\=./.gem.20260115-40784-euv8xg sitelibdir\=./.gem.20260115-40784-euv8xg install
+/usr/bin/install -c -m 0755 escape.so ./.gem.20260115-40784-euv8xg/erb
+
+current directory: /home/railson/project/ruby/projetos_pessoais/lojista/vendor/bundle/ruby/3.2.0/gems/erb-6.0.1/ext/erb/escape
+make DESTDIR\= sitearchdir\=./.gem.20260115-40784-euv8xg sitelibdir\=./.gem.20260115-40784-euv8xg clean

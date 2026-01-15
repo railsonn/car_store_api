@@ -11,7 +11,7 @@ class UserController < ApplicationController
     
     if @user.valid?
         token = encode_token({ user_id: @user.id })
-        render json: { id: @user.id }, status: :created
+        render json: @user, status: :created
     else
         render json: { error: "falha ao criar usuario" }, status: :unprocessable_entity
     end
@@ -23,6 +23,6 @@ class UserController < ApplicationController
   private 
 
   def user_params
-    params.permit(:email, :password)
+    params.require(:user).permit(:email, :password)
   end
 end

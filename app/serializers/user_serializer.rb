@@ -1,6 +1,6 @@
 class UserSerializer < ActiveModel::Serializer
   attribute :id, key: :identificador
-  attribute :email
+  attribute :email, key: :email
   attribute :created_at, key: :data_criacao
 
   def email 

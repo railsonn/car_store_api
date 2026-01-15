@@ -1,0 +1,19 @@
+current directory: /home/railson/project/ruby/projetos_pessoais/lojista/vendor/bundle/ruby/3.2.0/gems/stringio-3.2.0/ext/stringio
+/usr/bin/ruby3.2 -I/usr/lib/ruby/vendor_ruby extconf.rb
+checking for rb_io_mode_t in ruby/io.h... no
+creating Makefile
+
+current directory: /home/railson/project/ruby/projetos_pessoais/lojista/vendor/bundle/ruby/3.2.0/gems/stringio-3.2.0/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20260115-40784-tcsp9e sitelibdir\=./.gem.20260115-40784-tcsp9e clean
+
+current directory: /home/railson/project/ruby/projetos_pessoais/lojista/vendor/bundle/ruby/3.2.0/gems/stringio-3.2.0/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20260115-40784-tcsp9e sitelibdir\=./.gem.20260115-40784-tcsp9e
+compiling stringio.c
+linking shared-object stringio.so
+
+current directory: /home/railson/project/ruby/projetos_pessoais/lojista/vendor/bundle/ruby/3.2.0/gems/stringio-3.2.0/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20260115-40784-tcsp9e sitelibdir\=./.gem.20260115-40784-tcsp9e install
+/usr/bin/install -c -m 0755 stringio.so ./.gem.20260115-40784-tcsp9e
+
+current directory: /home/railson/project/ruby/projetos_pessoais/lojista/vendor/bundle/ruby/3.2.0/gems/stringio-3.2.0/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20260115-40784-tcsp9e sitelibdir\=./.gem.20260115-40784-tcsp9e clean
