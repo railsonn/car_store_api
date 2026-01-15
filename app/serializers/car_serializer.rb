@@ -4,11 +4,6 @@ class CarSerializer < ActiveModel::Serializer
   attribute :id, key: :identificador
 
   def price
-    ActionController::Base.helpers.number_to_currency(
-      object.price,
-      unit: "R$",
-      separator: ",",
-      delimiter: "."
-    )
+    "R$ #{'%.2f' % object.price}"
   end
 end

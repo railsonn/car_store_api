@@ -15,7 +15,6 @@ class UserSerializer < ActiveModel::Serializer
     "#{name[0..2]}***@#{domain}"
   end
 
-
   def token 
     @intance_options[:token]
   end

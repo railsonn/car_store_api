@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   post 'users/create', to: 'user#create' # rota para criar usuario
   post '/login', to: 'auth#login' # rota para fazer login e obter token
   get "auth/login" # rota para exibir formulario de login --- IGNORE ---
-  get "users", to: 'user#index' # rota para listar usuarios 
+  get "users/index", to: 'user#index' # rota para listar usuarios 
   namespace :api do
     namespace :v1 do
       root to: "home#index"  
