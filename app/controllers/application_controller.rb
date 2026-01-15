@@ -1,9 +1,7 @@
 class ApplicationController < ActionController::API
-  before_action :authenticate_user!
-  
-  def encode_token(payload)
-      JWT.encode(payload, "secret")
-  end
+    def encode_token(payload)
+        JWT.encode(payload, "secret")
+    end
 
     def decode_token
         auth_header = request.headers['Authorization']
