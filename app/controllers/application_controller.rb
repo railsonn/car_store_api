@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::API
+    include Pundit::Authorization
+    
     def encode_token(payload)
         JWT.encode(payload, "secret")
     end
