@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2025_12_29_191640) do
+ActiveRecord::Schema[8.1].define(version: 2026_01_15_170832) do
   create_table "brands", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.string "name"
@@ -34,6 +34,9 @@ ActiveRecord::Schema[8.1].define(version: 2025_12_29_191640) do
     t.string "email"
     t.integer "password"
     t.string "password_digest"
+    t.datetime "remember_created_at"
+    t.datetime "reset_password_sent_at"
+    t.string "reset_password_token"
     t.datetime "updated_at", null: false
   end
 

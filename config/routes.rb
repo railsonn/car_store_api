@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "home/index"
   devise_for :users
   # Esta em ordem a forma como o usuario ira interagir com a api, desde a criacao do usuario, login e depois acesso aos recursos
   post 'users/create', to: 'user#create' # rota para criar usuario
@@ -7,6 +8,7 @@ Rails.application.routes.draw do
   get "users", to: 'user#index' # rota para listar usuarios 
   namespace :api do
     namespace :v1 do
+      root to: "home#index"  
       resources :brands, only: [:index, :create, :show, :update, :destroy]
       resources :cars, only: [:index, :show, :create, :update, :destroy]
     end
