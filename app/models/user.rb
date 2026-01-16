@@ -4,14 +4,15 @@ class User < ApplicationRecord
     has_secure_password
     has_many :cars, dependent: :destroy
 
-    after_create :assign_default_role
+    after_commit :assign_default_role, on: :create
 
-    private 
+    private
 
     def assign_default_role
-        self.add_role(:admin) if User.count == 0 
-        if User.count > 0
-            self.add_role(:user)
+        if User.count == 1
+            add_role :admin
+        else
+            add_role :seller
         end
     end
 end

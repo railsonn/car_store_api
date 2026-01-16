@@ -7,7 +7,6 @@ Rails.application.routes.draw do
   get "users/index", to: 'user#index' # rota para listar usuarios 
   namespace :api do
     namespace :v1 do
-      root to: "home#index"  
       resources :brands, only: [:index, :create, :show, :update, :destroy]
       resources :cars, only: [:index, :show, :create, :update, :destroy]
     end

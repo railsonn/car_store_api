@@ -1,6 +1,6 @@
 class AuthController < ApplicationController
   def login
-    @user = User.find_by(email: params[:email])
+    @user = User.find_by(email: params[:user][:email])
 
     unless @user.valid?
       render json: { error: "Invalid email or password" },

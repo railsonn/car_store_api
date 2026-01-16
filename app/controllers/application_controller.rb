@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::API
     include Pundit::Authorization
-    
+
+
     def encode_token(payload)
         JWT.encode(payload, "secret")
     end
@@ -23,8 +24,9 @@ end
             user_id = decoded_token[0]['user_id']
             @user = User.find_by(id: user_id)
             @current_user = @user
+        end
     end
-end
+
 
     def authorized
         render json: { message: 'Voce precisa estar logado' }, status: :unauthorized unless authorized_user
